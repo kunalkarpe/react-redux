@@ -1,11 +1,11 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "react-bootstrap/Image";
 import Figure from "react-bootstrap/Figure";
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import { Row, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -39,6 +39,7 @@ const images = [
 ];
 
 const ImageSlider = () => {
+  const navigate = useNavigate();
   const settings = {
     infinite: true,
     dots: false,
@@ -74,9 +75,13 @@ const ImageSlider = () => {
                         src={item.src}
                         alt={item.alt}
                         className="  rounded img-fluid"
+                        onClick={() => navigate("/menu")}
                       ></LazyLoadImage>
                     </div>
-                    <Figure.Caption className=" fs-5 d-flex mt-3 mb-3  text-white  justify-content-center text-center">
+                    <Figure.Caption
+                      className=" fs-5 d-flex mt-3 mb-3  text-white  justify-content-center text-center"
+                      onClick={() => navigate("/menu")}
+                    >
                       {item.title}
                     </Figure.Caption>
                   </div>

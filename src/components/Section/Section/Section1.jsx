@@ -5,10 +5,12 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { useNavigate } from "react-router-dom";
 
 import "./Section1.css";
 
 const Section1 = () => {
+  const Navigate = useNavigate();
   return (
     <>
       <Container className="mt-5 roboto">
@@ -21,7 +23,12 @@ const Section1 = () => {
             </h4>
             <h5>So What Are You Waiting For?</h5>
 
-            <Button variant="warning text-white mt-2">Order Now</Button>
+            <Button
+              variant="warning text-white mt-2"
+              onClick={() => Navigate("/menu")}
+            >
+              Order Now
+            </Button>
           </Col>
 
           <Col
