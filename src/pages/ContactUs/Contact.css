@@ -1,0 +1,9 @@
+.contact {
+    width: 86vw;
+    height: 60vh;
+    border: 0;
+}
+
+.height-contact {
+    height: 50vh !important;
+}

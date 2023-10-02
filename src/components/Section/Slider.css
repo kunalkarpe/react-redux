@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+.img-text {
+    display: flex;
+    margin-top: 10px;
+    font-size: 20px;
+}
